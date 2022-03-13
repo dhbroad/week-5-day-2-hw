@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1><u>David's Fav 5 Bible Verses</u></h1>
+    <ol>
+        {% for my_verses in my_verses_list %} <!-- for loop in jinja -->
+        <li>{{ my_verses }}</li>
+        {% endfor %}
+    </ul>
+<br>
+<a href="{{ url_for('home') }}">Return Home</a>
+{% endblock content %}
